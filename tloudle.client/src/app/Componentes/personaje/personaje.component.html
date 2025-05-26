@@ -1,0 +1,43 @@
+<app-cabecera></app-cabecera>
+<div class="line">
+  <h1>{{ personaje?.nombre | uppercase }}</h1>
+</div>
+<div class="container-personajes">
+  <div class="personaje-container">
+  
+    <div class="imagen-section">
+      <div class="marco-imagen">
+        <img class="imagen-personaje" src="/Imagenes/{{ personaje?.foto }}" />
+      </div>
+    </div>
+
+   
+    <div class="datos-section">
+      <div class="datos-personaje">
+        <h3>Datos del Personaje</h3>
+        <ul>
+          <li><span class="etiqueta">Altura:</span> {{ personaje?.altura }}</li>
+          <li><span class="etiqueta">Edad:</span> {{ personaje?.edad }}</li>
+          <li><span class="etiqueta">Sexo:</span> {{ personaje?.sexo }}</li>
+          <li><span class="etiqueta">Color del Pelo:</span> {{ personaje?.colorPelo }}</li>
+          <li><span class="etiqueta">Juegos:</span> {{ personaje?.juegos }}</li>
+          <li><span class="etiqueta">Tipo:</span> {{ personaje?.tipoPersonaje }}</li>
+          <li><span class="etiqueta">Estado:</span> {{ personaje?.estado }}</li>
+        </ul>
+      </div>
+
+      <div class="descripcion-personaje">
+        <div class="titulo-descripcion">
+          <h2>Biografía</h2>
+          <div class="separador"></div>
+        </div>
+        <p>{{ personaje?.descripcion }}</p>
+      </div>
+      <div class="boton-container">
+        <button class=" boton-ver-personaje" (click)="volver()">Volver</button>
+      </div>
+    </div>
+    
+
+  </div>
+</div>

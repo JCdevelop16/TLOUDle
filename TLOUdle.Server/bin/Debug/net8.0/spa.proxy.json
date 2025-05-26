@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:56151",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Users\\Jorge\\Desktop\\Lenguajes\\Angular\\TLOUdle\\TLOUdle.Server\\..\\tloudle.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

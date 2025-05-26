@@ -1,0 +1,6 @@
+@TLOUdle.Server_HostAddress = http://localhost:5038
+
+GET {{TLOUdle.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

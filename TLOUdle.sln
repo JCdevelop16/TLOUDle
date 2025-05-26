@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tloudle.client", "tloudle.client\tloudle.client.esproj", "{4C68BA63-3EAB-187B-77B7-66033E295A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLOUdle.Server", "TLOUdle.Server\TLOUdle.Server.csproj", "{9C7BC7F3-18FE-4162-A128-29556B5B9B92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C68BA63-3EAB-187B-77B7-66033E295A6E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9C7BC7F3-18FE-4162-A128-29556B5B9B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7BC7F3-18FE-4162-A128-29556B5B9B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7BC7F3-18FE-4162-A128-29556B5B9B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7BC7F3-18FE-4162-A128-29556B5B9B92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D756952F-F466-413E-8DEF-07F30DDE6B12}
+	EndGlobalSection
+EndGlobal

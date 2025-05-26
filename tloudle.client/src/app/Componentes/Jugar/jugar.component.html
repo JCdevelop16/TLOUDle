@@ -1,0 +1,67 @@
+<app-cabecera></app-cabecera>
+<div class="line">
+  <h1>Jugar</h1>
+</div>
+<mat-icon style="color: red;" (click)="volver($event)" matTooltip="Volver" aria-hidden="false" aria-label="Example home icon" fontIcon="reply"></mat-icon>
+
+<div class="container-jugar">
+  
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Seleccionar Personaje</mat-label>
+        <input type="text"
+               placeholder="Personaje"
+               matInput
+               (keydown.enter)="registrarIntento(myControl.value || '')"
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          @for (option of filteredOptions | async; track option) {
+          <mat-option [value]="option">{{option}}</mat-option>
+          }
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+  
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Altura</th>
+      <th>Edad</th>
+      <th>Sexo</th>
+      <th>Color de Pelo</th>
+      <th>Juegos</th>
+      <th>Tipo</th>
+      <th>Estado</th>
+
+    </tr>
+    <tr *ngFor="let personaje of intentos; index as i">
+      <!-- ✅ Cambiado a `intentos` -->
+      <td>{{ i + 1 }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.nombre, 'nombre')}">{{ personaje.nombre }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.altura, 'altura')}">
+        {{ personaje.altura }} cm
+      </td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.edad, 'edad')}">{{ personaje.edad }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.sexo, 'sexo')}">{{ personaje.sexo }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.colorPelo, 'colorPelo')}">{{ personaje.colorPelo }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.juegos, 'juegos')}">{{ personaje.juegos }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.tipoPersonaje, 'tipoPersonaje')}">{{ personaje.tipoPersonaje }}</td>
+      <td [ngClass]="{'correcto': esCoincidencia(personaje.estado, 'estado')}">{{ personaje.estado }}</td>
+
+    </tr>
+  </table>
+
+  <div style="text-align: center" *ngIf="partidaTerminada">
+    <h2 style="color: white">{{ intentos.length === 8 ? '¡Fallaste! El personaje era:' : '¡Adivinaste! Era:' }}</h2>
+    <h2 style="color: white">{{ personajeObjetivo.nombre }}</h2>
+    <img class="marco-imagen" src="Imagenes/{{ personajeObjetivo.foto }}" alt="{{ personajeObjetivo.nombre }}" width="100">
+
+    <div style="text-align:center;">
+      <button class=" boton-ver-personaje" (click)="iniciarPartida()">Nueva Partida</button>
+    </div>
+  </div>
+</div>
+

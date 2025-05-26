@@ -1,0 +1,51 @@
+button{
+    background-color:red;
+    border: solid black 2px;
+    height:50px;
+    border-radius: 20px;
+    margin-bottom:20px;
+}
+/*Este CSS Afecta al componente actual entero*/
+:host {
+  display: block;
+  height: 100vh;
+  background-image: url('../../../../public/Imagenes/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+button:hover{
+  background-color: darkred;
+  cursor:pointer;
+  color: white;
+}
+.contenedor-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+}
+
+.transparente-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

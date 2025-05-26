@@ -1,0 +1,525 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/*----------------------------------INICIO-------------------------------------*/
+.contenedor-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;  
+}
+.transparente-inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px; 
+  height: 350px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7); 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*----------------------------------CABECERA-------------------------------------*/
+/* CABECERA CON COLORES AJUSTADOS */
+.cabecera-tlou {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 150px;
+  max-width: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(to right, rgb(80, 60, 20) 0%, /* Negro amarillento en el extremo izquierdo */
+  rgb(80, 60, 20) 0%, /* Negro amarillento en el extremo izquierdo */
+  rgb(45, 32, 0) 20%, /* Amarillo oscuro */
+  rgb(0, 0, 0) 45%, /* Negro puro en el centro (más ancho) */
+  rgb(25, 45, 80) 75%, /* Azul más suave */
+  rgb(10, 20, 50) 100% /* Azul menos intenso en el extremo derecho */
+  );
+  border-bottom: 1px solid #da1e1e;
+}
+
+/* CONTENEDOR CENTRAL */
+.contenedor-central {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.fondo-centro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 1px solid rgba(218, 30, 30, 0.3);
+  border-right: 1px solid rgba(26, 92, 26, 0.3);
+  z-index: -1;
+}
+
+/* IMÁGENES LATERALES */
+.imagen-lateral {
+  flex: 1;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+ 
+}
+
+
+   .imagen-lateral img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    <img _ngcontent-ng-c2063211115 src="/Imagenes/ellie-cab2.png" alt="Ellie">/*Borde amarillento de la imagen*/
+
+  } 
+
+/* Bordes laterales */
+.izquierda {
+  justify-content: flex-end;
+  border-right: 2px solid #FFD700; /* Dorado */
+}
+
+.derecha {
+  
+  border-left: 2px solid #4A6BA5; /* Azul */
+}}
+
+/* ELEMENTOS CENTRALES */
+.logo {
+  height: 45px;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 0 6px rgba(218, 30, 30, 0.7));
+}
+
+.contenedor-central h1 {
+  color: white;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(218, 30, 30, 0.6);
+}
+
+/* EFECTOS HOVER */
+.imagen-lateral:hover img {
+  transform: scale(1.05);
+}
+
+.izquierda:hover {
+  background: linear-gradient(to left, rgba(255, 215, 0, 0.1), transparent); /* Dorado */
+}
+
+.derecha:hover {
+  background: linear-gradient(to right, rgba(30, 144, 255, 0.1), transparent); /* Azul eléctrico */
+}
+
+
+/*----------------------------------VERPERSONAJES-------------------------------------*/
+
+/*Este será de uso general*/
+.line {
+  background:
+  /* Base oscura con textura */
+  linear-gradient(to right, rgba(20, 0, 0, 0.9) 0%, rgba(40, 0, 0, 0.85) 50%, rgba(20, 0, 0, 0.9) 100%),
+  /* Textura de grietas */
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40"><path d="M0 20 Q15 25 30 18 T60 22 T90 19 L100 20" stroke="%23da1e1e" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(218, 30, 30, 0.4);
+  border-bottom: 1px solid rgba(218, 30, 30, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+/*Aplica diferentes filtros antes de aplicar los del line*/
+  .line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(218, 30, 30, 0.6), transparent);
+    z-index: 1;
+  }
+
+  .line h1 {
+    color: #f0f0f0;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    text-shadow: 0 0 8px rgba(218, 30, 30, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+    .line h1::before,
+    .line h1::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 30px;
+      height: 1px;
+      background: linear-gradient(to right, rgba(218, 30, 30, 0.8), transparent);
+    }
+
+    .line h1::before {
+      right: 100%;
+    }
+
+    .line h1::after {
+      left: 100%;
+      background: linear-gradient(to left, rgba(218, 30, 30, 0.8), transparent);
+    }
+
+.container {
+  text-align: center;
+  padding: 30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23da1e1e" stroke-width="0.3" stroke-opacity="0.1"/></svg>'), linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+  height: 700px;
+}
+/*------------------------Estilos tabla verpersonajes------------------*/
+.container-tabla {
+  margin: auto;
+  height: 650px;
+  width: 80%;
+  overflow: auto;
+  box-shadow: 15px 20px 60px rgba(40, 0, 0, 0.85), 5px 5px 20px rgba(120, 30, 30, 0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(20, 20, 20, 0.8) ;
+  
+  
+}
+table th {
+  background-color: #641414 !important;
+  padding: 12px 20px !important;
+  text-align: left !important;
+  font-weight: bold !important;
+  color: #ffffff;
+  border-bottom: 2px solid #a13333 !important; /* Línea más notoria debajo del header */
+}
+
+table td {
+  padding: 12px 20px !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #DCDCDC;
+}
+
+/* Cambio en el hover para hacer más visible la interacción */
+table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+table{
+    background-color: transparent !important;
+}
+
+/*-----------------Estilos para el scroll de la tabla-----------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.6);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(180, 180, 180, 0.8);
+  }
+
+  /*----------------boton estilos--------------------------------*/
+  .boton-container{
+      margin: auto;
+      padding: 20px;
+  }
+.boton-verpersonajes {
+  background-color: red;
+  border: solid black 2px;
+  height: 30px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+  .boton-verpersonajes:hover {
+    background-color: darkred;
+    cursor: pointer;
+    color: white;
+  }
+.boton-ver-personaje {
+  padding: 8px 16px;
+  font-size: 14px; 
+  background-color: red;
+  color: black; 
+  border: 0; 
+  border-radius: 20px; 
+  transition: all 0.3s ease; 
+  cursor: pointer
+}
+  .boton-ver-personaje:hover {
+    background-color: darkred; 
+    color: white; 
+  } 
+  /*---------------------------INSTRUCCIONES--------------------------------------------*/
+.container-instrucciones {
+  padding: 20px;
+  background-color: darkred !important;
+  color: black !important;
+ 
+}
+.borde-instrucciones {
+  border: 5px solid black;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container-texto-pequeño{
+    background-color: darkred;
+}
+.texto-pequeño{
+    font-size: 12px;
+}
+.fondo-instrucciones {
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(4px);
+}
+/*-------------------------------------PERSONAJE-----------------------------------------------*/
+/* Estilo general */
+.container-personajes {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23da1e1e" stroke-width="0.3" stroke-opacity="0.1"/></svg>'), linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+  height: 700px;
+}
+
+.personaje-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Sección de imagen (adaptada para verticales) */
+.imagen-section {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.marco-imagen {
+  width: 100%;
+  height: 500px;
+  border: 8px solid #2c2c2c;
+  border-image: linear-gradient(to bottom, #641414, #3a0000) 1;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen-personaje {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.marco-imagen:hover .imagen-personaje {
+  transform: scale(1.03);
+}
+
+/* Sección de datos */
+.datos-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.datos-personaje {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(218, 30, 30, 0.3);
+  padding: 25px;
+  border-radius: 5px;
+  color: white;
+}
+
+  .datos-personaje h3 {
+    color: #da1e1e;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(218, 30, 30, 0.3);
+    padding-bottom: 10px;
+  }
+
+  .datos-personaje ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .datos-personaje li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+.etiqueta {
+  color: #da1e1e;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 120px;
+}
+
+/* Descripción */
+.descripcion-personaje {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(26, 92, 26, 0.3);
+  padding: 25px;
+  border-radius: 5px;
+  flex-grow: 1;
+  max-height: 30%;
+}
+
+.titulo-descripcion h2 {
+  color: #1a5c1a;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.separador {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1a5c1a, transparent);
+  margin-bottom: 20px;
+}
+
+.descripcion-personaje p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: white;
+}
+
+
+
+/*-------------------------------------JUGAR-----------------------------------------------*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.container-jugar {
+  display: flex;
+  flex-direction: column; /*Hace que los elementos se apilen en lugar de estar en línea */
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.correcto {
+  background-color: green !important;
+  color: white;
+  font-weight: bold;
+}
+.cercano {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+.foto-jugar {
+  height: 520px;
+    width: 430px;
+}
+
+.boton-container2 {
+  position:relative;
+  
+ 
+  padding: 12px 24px;
+  text-align: center;
+}
+.mat-icon{
+
+    cursor: pointer;
+    position: initial;
+}
